@@ -97,9 +97,9 @@ $ gistup -m"lab${LAB_NUMBER}"
 
 ## Links
 
-- [Tmux README](https://raw.githubusercontent.com/tmux/tmux/master/README)
+- [Tmux](https://raw.githubusercontent.com/tmux/tmux/master/README)
 - [Libevent](http://libevent.org)
-- [ncurses](http://invisible-island.net/ncurses/)
+- [Ncurses](http://invisible-island.net/ncurses/)
 
 ```
 Copyright (c) 2017 Братья Вершинины
