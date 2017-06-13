@@ -2,7 +2,7 @@
 
 Данная лабораторная работа посвещена изучению процесса создания сеансов совместной разработки с использованием инструмента **ngrok**
 
-```bash
+```ShellSession
 $ open https://ngrok.com/
 ```
 
@@ -14,7 +14,7 @@ $ open https://ngrok.com/
 
 ## Tutorial
 
-```bash
+```ShellSession
 $ cd ~
 $ mkdir install
 $ mkdir tmp
@@ -23,11 +23,11 @@ $ echo $HOME_PREFIX
 $ export USERNAME=`whoami`
 ```
 
-```bash
+```ShellSession
 $ cd tmp
 ```
 
-```bash
+```ShellSession
 $ wget https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
 $ tar -xvzf libevent-2.1.8-stable.tar.gz
 $ cd libevent-2.1.8-stable
@@ -36,7 +36,7 @@ $ make && make install
 $ cd ..
 ```
 
-```bash
+```ShellSession
 $ wget http://invisible-island.net/datafiles/release/ncurses.tar.gz
 $ tar -xvzf ncurses.tar.gz
 $ cd ncurses-5.9
@@ -46,7 +46,7 @@ $ cd ..
 ```
 
 
-```bash
+```ShellSession
 $ wget https://github.com/tmux/tmux/releases/download/2.5/tmux-2.5.tar.gz
 $ tar -xvzf tmux-2.5.tar.gz
 $ cd tmux-2.5
@@ -55,19 +55,19 @@ $ make && make install
 $ cd ..
 ```
 
-```bash
+```ShellSession
 $ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 $ unizp ngrok-stable-linux-amd64.zip
 $ mv ngrok ${HOME_PREFIX}/bin
 ```
 
-```bash
+```ShellSession
 $ export LD_LIBRARY_PATH=${HOME_PREFIX}/lib
 $ export PATH="${HOME_PREFIX}/bin:${PATH}"
 $ tmux new -s session_with_group
 ```
 
-```bash
+```ShellSession
 $ open https://ngrok.com/signup
 $ export NGROK_TOKEN=<токен>
 $ ngrok authtoken ${NGROK_TOKEN}
@@ -75,7 +75,7 @@ $ ngrok tcp 22
 <порт_ngrok_сервера>
 ```
 
-```bash
+```ShellSession
 $ ssh ${USERNAME}@0.tcp.ngrok.io -p<порт_ngrok_сервера>
 <пароль_от_учетной_записи>
 $ tmux a -t session_with_group
@@ -84,7 +84,7 @@ $ <C-B>"
 
 ## Report
 
-```bash
+```ShellSession
 $ cd ~/workspace/labs/
 $ export LAB_NUMBER=16
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
