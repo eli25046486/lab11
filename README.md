@@ -68,6 +68,7 @@ $ tmux new -s session_with_group
 ```
 
 ```ShellSession
+# Alisa:
 $ open https://ngrok.com/signup
 $ export NGROK_TOKEN=<токен>
 $ ngrok authtoken ${NGROK_TOKEN}
@@ -76,6 +77,7 @@ $ ngrok tcp 22
 ```
 
 ```ShellSession
+# Bob:
 $ ssh ${USERNAME}@0.tcp.ngrok.io -p<порт_ngrok_сервера>
 <пароль_от_учетной_записи>
 $ tmux a -t session_with_group
