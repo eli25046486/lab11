@@ -1,8 +1,8 @@
-## Laboratory work XVII
+## Laboratory work XI
 
 Данная лабораторная работа посвещена изучению процесса создания сеансов совместной разработки с использованием инструмента **ngrok**
 
-```ShellSession
+```sh
 $ open https://ngrok.com/
 ```
 
@@ -14,7 +14,7 @@ $ open https://ngrok.com/
 
 ## Tutorial
 
-```ShellSession
+```sh
 $ cd ~
 $ mkdir install
 $ mkdir tmp
@@ -23,30 +23,30 @@ $ echo $HOME_PREFIX
 $ export USERNAME=`whoami`
 ```
 
-```ShellSession
+```sh
 $ cd tmp
 ```
 
-```ShellSession
+```sh
 $ wget https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
 $ tar -xvzf libevent-2.1.8-stable.tar.gz
 $ cd libevent-2.1.8-stable
 $ ./configure --prefix=${HOME_PREFIX}
-$ make && make install 
+$ make && make install
 $ cd ..
 ```
 
-```ShellSession
+```sh
 $ wget http://invisible-island.net/datafiles/release/ncurses.tar.gz
 $ tar -xvzf ncurses.tar.gz
 $ cd ncurses-5.9
 $ ./configure --prefix=${HOME_PREFIX}
-$ make && make install 
+$ make && make install
 $ cd ..
 ```
 
 
-```ShellSession
+```sh
 $ wget https://github.com/tmux/tmux/releases/download/2.5/tmux-2.5.tar.gz
 $ tar -xvzf tmux-2.5.tar.gz
 $ cd tmux-2.5
@@ -55,19 +55,32 @@ $ make && make install
 $ cd ..
 ```
 
-```ShellSession
+```sh
 $ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 $ unizp ngrok-stable-linux-amd64.zip
 $ mv ngrok ${HOME_PREFIX}/bin
 ```
 
-```ShellSession
+```sh
 $ export LD_LIBRARY_PATH=${HOME_PREFIX}/lib
 $ export PATH="${HOME_PREFIX}/bin:${PATH}"
+$ tmux
+```
+
+```sh
+$ cd ~
+$ rm -rf tmp install
+```
+
+```sh
+$ brew install tmux ngrok # or use linuxbrew 🎉
+```
+
+```sh
 $ tmux new -s session_with_group
 ```
 
-```ShellSession
+```sh
 # Alisa:
 $ open https://ngrok.com/signup
 $ export NGROK_TOKEN=<токен>
@@ -76,7 +89,7 @@ $ ngrok tcp 22
 <порт_ngrok_сервера>
 ```
 
-```ShellSession
+```sh
 # Bob:
 $ ssh ${USERNAME}@0.tcp.ngrok.io -p<порт_ngrok_сервера>
 <пароль_от_учетной_записи>
@@ -86,15 +99,15 @@ $ <C-B>"
 
 ## Report
 
-```ShellSession
-$ cd ~/workspace/labs/
-$ export LAB_NUMBER=16
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
+```sh
+$ cd ~/workspace/
+$ export LAB_NUMBER=11
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER}.git tasks/lab${LAB_NUMBER}
 $ mkdir reports/lab${LAB_NUMBER}
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
 $ cd reports/lab${LAB_NUMBER}
 $ edit REPORT.md
-$ gistup -m "lab${LAB_NUMBER}"
+$ gist REPORT.md
 ```
 
 ## Links
@@ -104,5 +117,5 @@ $ gistup -m "lab${LAB_NUMBER}"
 - [Ncurses](http://invisible-island.net/ncurses/)
 
 ```
-Copyright (c) 2017 Братья Вершинины
+Copyright (c) 2015-2020 The ISC Authors
 ```
