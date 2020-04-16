@@ -1,5 +1,7 @@
 ## Laboratory work XI
 
+<a href="https://yandex.ru/efir/?stream_id=v7c2Ou7bACc8"><img src="https://raw.githubusercontent.com/tp-labs/lab11/master/preview.png" width="640"/></a>
+
 Данная лабораторная работа посвещена изучению процесса создания сеансов совместной разработки с использованием инструмента **ngrok**
 
 ```sh
