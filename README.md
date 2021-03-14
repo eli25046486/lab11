@@ -1,7 +1,5 @@
 ## Laboratory work XI
 
-<a href="https://yandex.ru/efir/?stream_id=v7c2Ou7bACc8"><img src="https://raw.githubusercontent.com/tp-labs/lab11/master/preview.png" width="640"/></a>
-
 Данная лабораторная работа посвещена изучению процесса создания сеансов совместной разработки с использованием инструмента **ngrok**
 
 ```sh
@@ -119,5 +117,5 @@ $ gist REPORT.md
 - [Ncurses](http://invisible-island.net/ncurses/)
 
 ```
-Copyright (c) 2015-2020 The ISC Authors
+Copyright (c) 2015-2021 The ISC Authors
 ```
